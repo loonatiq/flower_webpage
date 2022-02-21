@@ -1,0 +1,75 @@
+:root {
+  --navbar-background-color: #c9c9c9c2;
+}
+
+.asd {
+  display: flex;
+  background-color: var(--navbar-background-color);
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: var(--navbar-background-color); */
+  position: sticky;
+  top: 0;
+  padding: 0.5%;
+}
+
+.logo {
+  padding: 10px 17px;
+  margin: 0 2%;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menus {
+  display: flex;
+  font-weight: 600;
+}
+
+.menus li {
+  padding: 10px 17px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  margin: 0 2%;
+  font-weight: 600;
+}
+
+.links div {
+  padding: 10px 17px;
+  margin: 0 3px 0 0;
+  cursor: pointer;
+}
+
+.bars {
+  display: none;
+}
+
+.menus li:hover {
+  color: #e6e6e6;
+  background-color: #525252;
+  transition: 0.1s;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .asd {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .bars {
+    display: flex;
+  }
+}

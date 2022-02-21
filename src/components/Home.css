@@ -1,0 +1,38 @@
+:root {
+  --sentence-background-color: #27272742;
+  --sentence-color: #e6e6e6;
+}
+
+.bg-img {
+  height: 100vh;
+  background: url(../img/pexels-anna-shvets-5894050.jpg) no-repeat 50% 50% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.sentences {
+  background-color: #3f3f3f2f;
+  position: relative;
+  top: 20%;
+}
+
+.sentence1 {
+  color: var(--sentence-color);
+  font-size: 400%;
+  position: relative;
+  left: 5%;
+  padding: 3%;
+}
+
+.sentence2 {
+  color: var(--sentence-color);
+  font-size: 400%;
+  position: relative;
+  left: 15%;
+  padding: 3%;
+}
+
+@media screen and (max-width: 600px) {
+}
