@@ -3,7 +3,7 @@
   --sentence-color: #e6e6e6;
 }
 
-.bg-img {
+.bg-img-home {
   height: 100vh;
   background: url(../img/pexels-anna-shvets-5894050.jpg) no-repeat 50% 50% fixed;
   -webkit-background-size: cover;
@@ -13,9 +13,13 @@
 }
 
 .sentences {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
   background-color: #3f3f3f2f;
-  position: relative;
+  position: absolute;
   top: 20%;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .sentence1 {
@@ -24,6 +28,7 @@
   position: relative;
   left: 5%;
   padding: 3%;
+  animation: slide 2s;
 }
 
 .sentence2 {
@@ -32,7 +37,11 @@
   position: relative;
   left: 15%;
   padding: 3%;
+  animation: slide 2s;
 }
 
-@media screen and (max-width: 600px) {
+@keyframes slide {
+  from {
+    left: -300px;
+  }
 }

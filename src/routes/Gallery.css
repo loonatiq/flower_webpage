@@ -1,0 +1,9 @@
+.bg-img-gallery {
+  height: 100vh;
+  background: url(../img/pexels-roman-odintsov-6022846.jpg) no-repeat 50% 50%
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
