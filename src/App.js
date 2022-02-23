@@ -9,10 +9,19 @@ import Location from "./routes/Location";
 
 function App() {
   function setScreenSize() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-    console.log("resize");
+    window.addEventListener("resize", () => {
+      console.log("resized");
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    });
+
+    // window.removeEventListener("resize", () => {
+    //   console.log("resized");
+    //   let vh = window.innerHeight * 0.01;
+    //   document.documentElement.style.setProperty("--vh", `${vh}px`);
+    // });
   }
+
   useEffect(() => {
     setScreenSize();
   });
