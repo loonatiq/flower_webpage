@@ -16,7 +16,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color: #3f3f3f2f;
+  background-color: #3f3f3f65;
   position: absolute;
   top: 20%;
   font-family: "Times New Roman", Times, serif;
@@ -26,22 +26,23 @@
   color: var(--sentence-color);
   font-size: 400%;
   position: relative;
-  margin-left: 5%;
-  padding: 3%;
-  animation: slide 2s;
+  padding: 3% 0 3% 5%;
+  animation: slide 1.5s;
 }
 
 .sentence2 {
   color: var(--sentence-color);
   font-size: 400%;
   position: relative;
-  margin-left: 15%;
-  padding: 3%;
-  animation: slide 2s;
+  padding: 3% 0 3% 20%;
+  animation: slide 1.5s;
 }
 
 @keyframes slide {
   from {
-    left: -300px;
+    left: -25%;
+  }
+  to {
+    left: 0;
   }
 }
