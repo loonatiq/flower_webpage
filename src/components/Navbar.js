@@ -52,6 +52,12 @@ function Navbar() {
               className="instagram"
               icon={faInstagram}
               size="2x"
+              onClick={() =>
+                window.open(
+                  "https://www.instagram.com/line_flower_96/",
+                  "_blank"
+                )
+              }
             />
             <FontAwesomeIcon className="youtube" icon={faYoutube} size="2x" />
           </div>

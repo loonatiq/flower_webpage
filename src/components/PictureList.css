@@ -1,0 +1,16 @@
+.picture img {
+  height: 350px;
+  padding: 10px;
+}
+
+.picture img:hover {
+  transform: scale(1.4);
+  transition: 0.25s;
+}
+
+@media screen and (max-width: 800px) {
+  .picture img {
+    width: 300px;
+    height: auto;
+  }
+}
