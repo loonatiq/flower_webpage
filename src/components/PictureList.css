@@ -13,4 +13,7 @@
     width: 300px;
     height: auto;
   }
+  .picture img:hover {
+    transform: none;
+  }
 }
