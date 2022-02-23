@@ -1,6 +1,7 @@
 .bg-img-contact {
   height: 100vh;
-  background: url(../img/pexels-vjapratama-935789.jpg) no-repeat 50% 50% fixed;
+  background: url(../../public/img/pexels-vjapratama-935789.jpg) no-repeat 50%
+    50% fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

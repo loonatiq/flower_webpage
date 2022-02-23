@@ -1,6 +1,7 @@
 .bg-img-location {
   height: 100vh;
-  background: url(../img/pexels-teona-swift-6913752.jpg) no-repeat 50% 50% fixed;
+  background: url(../../public/img/pexels-teona-swift-6913752.jpg) no-repeat 50%
+    50% fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

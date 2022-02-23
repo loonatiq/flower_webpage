@@ -5,7 +5,8 @@
 
 .bg-img-home {
   height: 100vh;
-  background: url(../img/pexels-anna-shvets-5894050.jpg) no-repeat 50% 50% fixed;
+  background: url(../../public/img/pexels-anna-shvets-5894050.jpg) no-repeat 50%
+    50% fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
