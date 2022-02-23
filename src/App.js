@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Contact from "./routes/Contact";
@@ -7,6 +8,15 @@ import Home from "./routes/Home";
 import Location from "./routes/Location";
 
 function App() {
+  function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    console.log("resize");
+  }
+  useEffect(() => {
+    setScreenSize();
+  });
+
   return (
     <BrowserRouter>
       <Routes>
