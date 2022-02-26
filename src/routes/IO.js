@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Loading from "../components/Loading.js";
-
+import "./IO.css";
 function IO() {
   const [isLoading, setIsLoading] = useState(false);
   const [pictures, setPictures] = useState([0]);
@@ -11,6 +11,7 @@ function IO() {
     setIsLoading(true);
     const response = await fetch(`../../galleryFetch.json`);
     const json = await response.json();
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     const slice = json.slice(items, items + 5);
     setPictures((prev) => [...prev, ...slice]);
     setIsLoading(false);
@@ -21,9 +22,10 @@ function IO() {
   }, []);
 
   const oi = async ([entry], observer) => {
-    if (entry.isIntersecting) {
-      observer.unobserve(imgRef.current);
+    console.log(isLoading);
+    if (entry.isIntersecting && isLoading) {
       increaseItem();
+      observer.unobserve(imgRef.current);
       console.log("oi", items);
     }
   };
@@ -33,13 +35,14 @@ function IO() {
   }, [items]);
 
   useEffect(() => {
-    const io = new IntersectionObserver(oi);
+    const io = new IntersectionObserver(oi, { threshold: 1 });
     if (imgRef.current) {
       io.observe(imgRef.current);
     }
     return () => {
       console.log("return");
       io.disconnect();
+      console.log(isLoading);
     };
   }, [pictures]);
 
