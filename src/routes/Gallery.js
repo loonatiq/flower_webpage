@@ -1,27 +1,17 @@
 import Navbar from "../components/Navbar";
 import "./Gallery.css";
-// import pics from "../gallery.json";
+import images from "../gallery.json";
 import PictureList from "../components/PictureList";
-import { useEffect, useState } from "react";
+import IO from "./IO";
 
 function Gallery() {
-  const [images, setimages] = useState([]);
-  const getImages = async () => {
-    const response = await fetch("../../gallery.json");
-    const json = await response.json();
-    setimages(json);
-  };
-
-  useEffect(() => {
-    getImages();
-  }, []);
-
   return (
     <>
       <div className="bg-img-gallery">
         <Navbar />
         <div className="container">
-          <PictureList pictures={images} />
+          {/* <PictureList pictures={images} /> */}
+          <IO />
         </div>
       </div>
     </>

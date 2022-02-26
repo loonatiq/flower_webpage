@@ -47,3 +47,17 @@
     left: 0;
   }
 }
+
+@media screen and (max-height: 853px) {
+  .bg-img-home {
+    background: url(../../public/img/pexels-anna-shvets-5894050-app.jpg)
+      no-repeat 50% 50% fixed;
+  }
+
+  .sentence1 {
+    font-size: 300%;
+  }
+  .sentence2 {
+    font-size: 300%;
+  }
+}
