@@ -23,7 +23,7 @@ function IO() {
 
   const oi = async ([entry], observer) => {
     console.log(isLoading);
-    if (entry.isIntersecting && isLoading) {
+    if (entry.isIntersecting) {
       increaseItem();
       observer.unobserve(imgRef.current);
       console.log("oi", items);
@@ -32,6 +32,7 @@ function IO() {
 
   useEffect(() => {
     getPictures();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items]);
 
   useEffect(() => {
@@ -44,6 +45,7 @@ function IO() {
       io.disconnect();
       console.log(isLoading);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pictures]);
 
   const pictureList = pictures.map((value, index) => {
