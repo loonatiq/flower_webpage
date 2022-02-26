@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Loading from "../components/Loading.js";
 
 function IO() {
@@ -20,8 +20,9 @@ function IO() {
     setItems((items) => items + 5);
   }, []);
 
-  const oi = async ([entry]) => {
+  const oi = async ([entry], observer) => {
     if (entry.isIntersecting) {
+      observer.unobserve(imgRef.current);
       increaseItem();
       console.log("oi", items);
     }
@@ -46,7 +47,6 @@ function IO() {
     return (
       <div key={index} className="picture" ref={imgRef}>
         <img src={value.PictureUrl} alt={value.id}></img>
-        <div>{items}</div>
       </div>
     );
   });
