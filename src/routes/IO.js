@@ -7,22 +7,23 @@ function IO() {
   const [items, setItems] = useState(0);
   const [ref, setRef] = useState();
   const imgRef = useRef(null);
-
+  const num = 3;
   //JSON에서 불러온 데이터 5개씩 배열에 넣기
   const getPictures = async () => {
     setIsLoading(true);
     const response = await fetch(`../../galleryFetch.json`);
     const json = await response.json();
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    const slice = json.slice(items, items + 5);
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    const slice = json.slice(items, items + num);
     setPictures((prev) => [...prev, ...slice]);
     console.log(1);
+    console.log(imgRef.current);
     setIsLoading(false);
   };
 
   //배열 시작하는 위치 변경
   const increaseItem = useCallback(() => {
-    setItems((items) => items + 5);
+    setItems((items) => items + num);
   }, []);
 
   const oi = async ([entry]) => {
@@ -31,6 +32,7 @@ function IO() {
     if (ref !== imgRef.current) {
       //이미지 인터섹션 중에만 배열 시작 위치 변경
       if (entry.isIntersecting) {
+        console.log(entry);
         increaseItem();
       }
     }
@@ -68,7 +70,7 @@ function IO() {
   return (
     <>
       {pictureList}
-      <div>{isLoading ? <Loading /> : ""}</div>
+      <div className="loading">{isLoading ? <Loading /> : ""}</div>
     </>
   );
 }

@@ -1,6 +1,6 @@
 .picture img {
   height: 350px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .picture img:hover {
@@ -8,9 +8,26 @@
   transition: 0.25s;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50%;
+}
+
 @media screen and (max-width: 800px) {
   .picture img {
-    width: 300px;
+    height: 300px;
+    width: auto;
+  }
+  .picture img:hover {
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .picture img {
+    width: 250px;
     height: auto;
   }
   .picture img:hover {
