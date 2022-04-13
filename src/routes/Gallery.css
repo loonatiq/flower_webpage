@@ -2,6 +2,7 @@
   height: 100vh;
   background: url(../../public/img/pexels-roman-odintsov-6022846.jpg) no-repeat
     50% 50% fixed;
+  /* background-color: #c2b9b0; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,19 +13,57 @@
 .bg-img-gallery::-webkit-scrollbar {
   display: none;
 }
+.btns {
+  display: flex;
+  justify-content: center;
+  background-color: #272727cc;
+}
+
+.btns button {
+  color: #e6e6e6;
+  background-color: #ffffff00;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.btns button:hover {
+  transform: scale3d(1.1, 1.1, 1);
+  transition: 0.2s;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0;
+  margin: 0;
+  color: #e6e6e6;
+  background-color: #272727cc;
+}
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 90%;
-  background-color: #b9b9b933;
-  padding: 5%;
+  width: 100%;
+  background-color: #e7e7e7a2;
+  padding: 2.5% 0;
+  margin: 0 0;
+  /* border-radius: 30px; */
 }
 
 @media screen and (max-width: 800px) {
   .container {
-    padding: 20% 5%;
+    padding: 10% 0;
+  }
+  .btns button {
+    margin-top: 20%;
+  }
+  .btns button:hover {
+    transform: scale3d(1.1, 1.1, 1);
+    transition: 0.2s;
   }
 }

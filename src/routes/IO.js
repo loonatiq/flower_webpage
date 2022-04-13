@@ -1,23 +1,24 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Loading from "../components/Loading.js";
 import "./IO.css";
-function IO() {
+function IO({ sort }) {
   const [isLoading, setIsLoading] = useState(false);
   const [pictures, setPictures] = useState([0]);
   const [items, setItems] = useState(0);
   const [ref, setRef] = useState();
   const imgRef = useRef(null);
-  const num = 3;
-  //JSON에서 불러온 데이터 5개씩 배열에 넣기
+  const sortRef = useRef(sort);
+  const num = 4;
+  //JSON에서 불러온 데이터 4개씩 배열에 넣기
   const getPictures = async () => {
     setIsLoading(true);
-    const response = await fetch(`../../galleryFetch.json`);
+    const response = await fetch(`../../galleryFetch${sort}.json`);
     const json = await response.json();
     await new Promise((resolve) => setTimeout(resolve, 500));
     const slice = json.slice(items, items + num);
     setPictures((prev) => [...prev, ...slice]);
-    console.log(1);
-    console.log(imgRef.current);
+    // console.log(1);
+    // console.log(imgRef.current);
     setIsLoading(false);
   };
 
@@ -32,15 +33,23 @@ function IO() {
     if (ref !== imgRef.current) {
       //이미지 인터섹션 중에만 배열 시작 위치 변경
       if (entry.isIntersecting) {
-        console.log(entry);
+        // console.log(entry);
         increaseItem();
       }
     }
   };
 
+  useEffect(() => {
+    console.log(sortRef);
+    console.log("sort:", sort);
+    setItems(0);
+    setPictures([0]);
+  }, [sort]);
+
   //배열 시작 위치 변경시 새 데이터 불러오기
   useEffect(() => {
     getPictures();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items]);
 

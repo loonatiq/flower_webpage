@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "PictureUrl": "./img/basket/1.jpg"
+  },
+  {
+    "id": 2,
+    "PictureUrl": "./img/basket/2.jpg"
+  },
+  {
+    "id": 3,
+    "PictureUrl": "./img/basket/3.jpg"
+  },
+  {
+    "id": 4,
+    "PictureUrl": "./img/basket/4.jpg"
+  },
+  {
+    "id": 5,
+    "PictureUrl": "./img/basket/5.jpg"
+  },
+  {
+    "id": 6,
+    "PictureUrl": "./img/basket/6.jpg"
+  }
+]
