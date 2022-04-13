@@ -7,12 +7,14 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow: scroll;
+  overflow: auto;
   -ms-overflow-style: none;
 }
-.bg-img-gallery::-webkit-scrollbar {
+
+/* .bg-img-gallery::-webkit-scrollbar {
   display: none;
-}
+} */
+
 .btns {
   display: flex;
   justify-content: center;
@@ -25,7 +27,7 @@
   border: none;
   padding: 10px;
   font-weight: 600;
-  font-family: sans-serif;
+  font-family: "GAMJAFLOWER-REGULAR";
 }
 
 .btns button:hover {
@@ -41,6 +43,7 @@
   margin: 0;
   color: #e6e6e6;
   background-color: #272727cc;
+  font-family: "GAMJAFLOWER-REGULAR";
 }
 
 .container {

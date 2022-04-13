@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
+import TopBtn from "../components/TopBtn";
 import "./Gallery.css";
 // import images from "../gallery.json";
 // import PictureList from "../components/PictureList";
@@ -17,9 +18,11 @@ function Gallery() {
     setTitle(e.target.name);
   };
 
+  // const galleryID = document.getElementById("gallery");
+
   return (
     <>
-      <div className="bg-img-gallery">
+      <div id="gallery" className="bg-img-gallery">
         <Navbar />
         <div className="btns">
           <button name="꽃다발" value="bouquet" onClick={handleBtnClick}>
@@ -44,6 +47,7 @@ function Gallery() {
           {/* <PictureList pictures={images} /> */}
           <IO sort={sort} />
         </div>
+        <TopBtn getId={"gallery"} />
       </div>
     </>
   );

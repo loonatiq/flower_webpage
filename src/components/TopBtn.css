@@ -1,0 +1,17 @@
+.topBtn {
+  display: flex;
+  position: fixed;
+  padding: 5px;
+  bottom: 3%;
+  right: 3%;
+  color: #e6e6e6;
+  background-color: #272727cc;
+  border-radius: 6px;
+}
+
+/* @media screen and (max-width: 800px) {
+  .topBtn {
+    bottom: 3%;
+    right: 3%;
+  }
+} */
