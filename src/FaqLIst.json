@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "어떻게하나요?1",
+      "answer": "이렇게하세요!1",
+      "show": false
+    },
+    {
+      "id": 2,
+      "question": "어떻게하나요?2",
+      "answer": "이렇게하세요!2",
+      "show": false
+    },
+    {
+      "id": 3,
+      "question": "어떻게하나요?3",
+      "answer": "이렇게하세요!3",
+      "show": false
+    },
+    {
+      "id": 4,
+      "question": "어떻게하나요?4",
+      "answer": "이렇게하세요!4",
+      "show": false
+    }
+  ]
+}
