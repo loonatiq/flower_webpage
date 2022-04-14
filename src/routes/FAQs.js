@@ -3,13 +3,13 @@ import Navbar from "../components/Navbar";
 import "./FAQs.css";
 
 function FAQs() {
-  const [faqToggle, setFaqToggle] = useState(false);
+  // const [faqToggle, setFaqToggle] = useState(false);
 
-  const faqToggleClick = (e) => {
-    // setFaqToggle((faqToggle) => !faqToggle);
-    console.log("toggleclicked!");
-    console.log(e.target.children);
-  };
+  // const faqToggleClick = (e) => {
+  //   // setFaqToggle((faqToggle) => !faqToggle);
+  //   console.log("toggleclicked!");
+  //   console.log(e.target.children);
+  // };
 
   return (
     <>
